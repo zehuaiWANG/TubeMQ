@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>用户指南 &mdash; TubeMQ  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="TubeMQ 文档" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TubeMQ
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">用户指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">前提条件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build">构建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-distribution-tarball">构建发布 tar 包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-source-code">从源代码中构建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deploy">部署</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TubeMQ</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>用户指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/user-guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-guide">
+<h1>用户指南<a class="headerlink" href="#user-guide" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="prerequisites">
+<h2>前提条件<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Java 1.7 或 1.8（Java 9 及更高版本尚未验证）</p></li>
+<li><p>Maven</p></li>
+<li><p><a class="reference external" href="https://github.com/protocolbuffers/protobuf/releases/tag/v2.5.0">protoc 2.5.0</a></p></li>
+</ul>
+</div>
+<div class="section" id="build">
+<h2>构建<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h2>
+<div class="section" id="build-distribution-tarball">
+<h3>构建发布 tar 包<a class="headerlink" href="#build-distribution-tarball" title="永久链接至标题">¶</a></h3>
+<p>进入项目根目录，并执行</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mvn clean package -Dmaven.test.skip
+</pre></div>
+</div>
+<p>项目的每个模块都可以单独地构建。</p>
+</div>
+<div class="section" id="build-source-code">
+<h3>从源代码中构建<a class="headerlink" href="#build-source-code" title="永久链接至标题">¶</a></h3>
+<p>如果你想在 IDE 中构建和调试源代码，进入项目根目录，并执行</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mvn compile
+</pre></div>
+</div>
+<p>这个命令会从 <code class="docutils literal notranslate"><span class="pre">proto</span></code> 文件中生成 Java 源文件，生成文件在 <code class="docutils literal notranslate"><span class="pre">target/generated-sources</span></code>。</p>
+<p>当以上命令执行完成后，你可以使用 IDE 将项目作为 Maven 项目导入。</p>
+</div>
+<div class="section" id="deploy">
+<h3>部署<a class="headerlink" href="#deploy" title="永久链接至标题">¶</a></h3>
+<p>After the build, please go to <code class="docutils literal notranslate"><span class="pre">tubemq-server/target</span></code>. You can find the <strong>tubemq-server-x.x.x-bin.tar.gz</strong> file. It is the server deployment package, which includes scripts, configuration files, dependency jars and web GUI code.</p>
+<p>For the first time deployment, we just need to extract the package file. For example, we put these files into the <code class="docutils literal notranslate"><span class="pre">/opt/tubemq-server</span></code>, here's the folder structure.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/opt/tubemq-server
+├── bin
+├── conf
+├── lib
+├── logs
+└── resources
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="TubeMQ 文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, TubeMQ Team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
